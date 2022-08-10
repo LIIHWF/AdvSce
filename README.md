@@ -4,7 +4,7 @@
 
 # Usage
 
-Use AdvSce to manually create and execute a scenario.
+Use AdvSce to create and execute a scenario.
 
 ```python
 from advsce.scenario import ScenarioDescription
