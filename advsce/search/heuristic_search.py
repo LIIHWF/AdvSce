@@ -204,14 +204,14 @@ class HeuristicSearch:
             problem_generator = SingleStateSearchGenerator(self.base_scenario, self.aut_analyzer, self._controller_settings, f'npc{len(self.base_scenario.agents)}', self.aut_id, self.time_limit)
             return problem_generator.generate()
 
-    def __init__(self, base_result, max_agent_num,controller_settings):
+    def __init__(self, base_result, max_additional_agent_num, controller_settings):
         self._searched_pattern = set()
         self._unsearched_problems = PriorityQueue()
         self._expandable_scenarios = PriorityQueue()
         # generate new problems from searched scenarios
 
         self.base_result = base_result 
-        self.max_agent_num = max_agent_num
+        self.max_agent_num = max_additional_agent_num
         self.controller_settings = controller_settings
 
     def search(self):
